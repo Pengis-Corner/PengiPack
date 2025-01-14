@@ -1,0 +1,46 @@
+# To publish a new release, press 'Create new release' and fill in the form.
+# Use an appropriate tag name starting with 'v'.
+# For example, 'v2.5.0'. It must use semantic versioning (which is "vX.Y.Z").
+
+---
+name: "tagged-release"
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  tagged-release:
+    name: "Tagged Release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Check out this cool repo!"
+        uses: actions/checkout@v4
+
+      - name: "Build zip"
+        run: cd pack && zip -r ../PengiPack.zip . && cd ..
+
+      - name: "Generate sha1 hash"
+        run:
+          sha1sum PengiPack.zip | cut -d " " -f 1 > hash.sha1
+
+          # Extract the tag description for release notes
+      - name: Get Tag Description
+        id: tag_description
+        run: echo 'description=$(git tag --sort=-creatordate | head -n 1 | xargs -I {} git for-each-ref refs/tags/{} --format="%(contents)")' >> $GITHUB_OUTPUT
+
+      # Create the release and upload assets
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          body: ${{ steps.version.outputs.description }}
+          prerelease: false
+          files: |
+            PengiPack.zip
+            hash.sha1
+
