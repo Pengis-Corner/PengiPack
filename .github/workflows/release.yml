@@ -5,6 +5,13 @@
 ---
 name: "tagged-release"
 
+permissions:
+  contents: write
+  deployments: write
+  id-token: write
+  packages: write
+  repository-projects: write
+
 on:
   push:
     tags:
