@@ -27,23 +27,40 @@ Features include:
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
 
-| Rank | Glyph |
-|------|-------|
-| Penguin |  | 
-| VIP |  | 
-| VIP+ |  | 
-| PENGI |  | 
-| PENGI+ |  | 
-| PENGI++ |  | 
-| Mod |  | 
-| Owner |  | 
-| Admin |  | 
-| Twitch |  | 
-| Dev |  | 
-| YouTube |  | 
-| Broadcast |  | 
-| Partner |  | 
-| NPC |  | 
+| Rank             | Symbol                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Admin  |  |
+| Blue   |  |
+| Builder |  |
+| Designer |  |
+| Dev |  |
+| Devlarge |  |
+| Donator |  |
+| Elite |  |
+| Elite+ |  |
+| Event staff |  |
+| God |  |
+| Green |  |
+| Helper |  |
+| Manager |  |
+| Media |  |
+| Mod |  |
+| Modlarge |  |
+| Mvp |  |
+| Mvp+ |  |
+| Mvp++ |  |
+| Noob |  |
+| OG |  |
+| Owner |  |
+| Pro |  |
+| Red |  |
+| Tiktok |  |
+| Twitch |  |
+| Vip |  |
+| Vip+ |  |
+| Yellow |  |
+| Youtube |  |
+| Member |  |
 
 
-``` Note that the symbol  is bugged right now ```
+``` Note that the symbol  is bugged right now ```
